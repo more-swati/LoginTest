@@ -35,12 +35,11 @@ public class BasicScript {
 		driver = new AndroidDriver<MobileElement>(url, dc);
 		Thread.sleep(20000);
 	
-		WebElement phone = driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.EditText\r\n" + 
-				"");
+		WebElement phone = driver.findElementByXPath("//android.widget.EditText[@index='0']");
 		phone.click();
 		phone.clear();
 		phone.sendKeys("8149233196");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		
 		driver.findElementByClassName("android.widget.Button").click();
 		Thread.sleep(10000);
